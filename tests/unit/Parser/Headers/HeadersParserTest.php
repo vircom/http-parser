@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace VirComTest\HttpParser\Parser\Headers;
 
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\MockObject\Stub;
 use VirCom\HttpParser\Parser\Headers\HeaderParser;
 use VirCom\HttpParser\Parser\Headers\HeadersParser;
 
 class HeadersParserTest extends TestCase
 {
     /**
-     * @var HeaderParser
+     * @var HeaderParser|Stub
      */
     private HeaderParser $headerParser;
     private HeadersParser $headersParser;
