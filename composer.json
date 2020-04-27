@@ -27,7 +27,8 @@
         "phpunit/phpunit": "^9.1",
         "symplify/easy-coding-standard": "^7.2",
         "phpstan/phpstan": "^0.12.19",
-        "vimeo/psalm": "^3.11"
+        "vimeo/psalm": "^3.11",
+        "php-coveralls/php-coveralls": "^2.2"
     },
     "autoload-dev": {
         "psr-4": {
