@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="phpunit.xsd"
+    bootstrap="./vendor/autoload.php"
+    colors="true"
+    verbose="true"
+    beStrictAboutChangesToGlobalState="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTodoAnnotatedTests="true">
+
+    <testsuites>
+        <testsuite name="UnitTests">
+            <directory>tests/unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+            <exclude>
+                <directory>src/Parser/Exception</directory>
+                <directory>src/Parser/StartLine/Exception</directory>
+                <directory>src/Parser/Headers/Exception</directory>
+                <directory>src/ValueObject</directory>
+                <file>src/HttpParserFactory.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+
+</phpunit>
