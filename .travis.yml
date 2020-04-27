@@ -13,10 +13,7 @@ script:
     - vendor/bin/phpstan analyse
     - vendor/bin/psalm --show-info=false
     - vendor/bin/ecs check src tests
-    
-after_script:
-    - vendor/bin/phpunit --coverage-clover data/test-coverage/clover/clover.xml
-
 
 after_success:
+  - vendor/bin/phpunit --coverage-clover data/test-coverage/clover/clover.xml
   - travis_retry vendor/bin/php-coveralls
