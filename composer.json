@@ -37,6 +37,7 @@
     "scripts": {
         "test": "phpunit",
         "test-coverage-html": "phpunit --coverage-html data/test-coverage/html/",
+        "test-coverage-clover": "phpunit --coverage-clover data/test-coverage/clover/clover.xml",
         "phpstan": "vendor/bin/phpstan analyse",
         "psalm": "vendor/bin/psalm --show-info=false",
         "ecs": "vendor/bin/ecs check src tests",
